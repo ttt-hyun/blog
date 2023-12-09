@@ -1,13 +1,19 @@
-import './css/App.css';
-import './css/reset.css';
-import './css/component.css';
-import './css/utility.css';
-import Sideleft from './component/layout'
-import Main from './component/main'
+import {Header, Sideleft} from './component/layout';
+import Main from './component/main';
+import useLocalStorage from "use-local-storage";
+import { useState } from 'react';
+
 
 function App() {
+  const [isDark, setDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!isDark)
+    console.log('working toggle');
+  }
+
   return (
-    <div className="wrapper">
+    <div className="wrapper" data-theme={isDark ? 'dark' : 'light'}>
+      <Header isChecked={isDark} handleChange={toggleDarkMode} />
       <Sideleft />
       <div className="container flex-box flex-column">
         <Main />

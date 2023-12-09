@@ -1,4 +1,26 @@
 /* ==================================================
+    dark/light mode
+================================================== */
+:root {
+    --background-color:#ffffff;
+    --bg-light: #fafafa;
+    --bg-light-slct: #ececec;
+    --text-color:#1a1a1a;
+}
+[data-theme="dark"]{
+    --background-color:#1a1a1a;
+    --bg-light: #fafafa;
+    --bg-light-slct: #ececec;
+    --text-color:#ffffff;
+}
+
+.wrapper{
+    background-color:var(--background-color);
+    color:var(--text-color);
+}
+
+header{width:100%; position: absolute; top:70px; left:0; z-index:50;}
+/* ==================================================
                        Flex
 ================================================== */
 
