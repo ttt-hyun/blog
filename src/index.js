@@ -5,6 +5,7 @@ import './css/App.css';
 import './css/reset.css';
 import './css/component.css';
 import './css/utility.css';
+import './css/markdown.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

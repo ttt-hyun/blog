@@ -1,6 +1,5 @@
 import MarkDown from 'markdown-to-jsx';
 import React, {useState, useEffect} from 'react';
-import 'github-markdown-css';
 
 
 function Main(){
@@ -15,8 +14,6 @@ function Main(){
                 .then(res => setPost(res))
         })
         .catch(err => console.log(err));
-        // .then(res => console.log(res))
-        // .catch(err => console.log(err)); 
     })
     return (
         <div className="max-grid ml-auto mr-auto flex-box flex-column">

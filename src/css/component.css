@@ -7,24 +7,27 @@
 /* ==================================================
     prim option
 ================================================== */
-.prim-shadow{box-shadow:rgba(0, 0, 0, 0.05) 0px 1.3px 13px 3.25px;}
+.prim-shadow{box-shadow:rgba(0, 0, 0, 0.06) 0px 1.3px 13px 3.25px;}
 
 /* ==================================================
     btn
 ================================================== */
-.prim-btn{display:flex; width:40px; height:40px; border-radius:6.5px; background:var(--bg-light);}
-.prim-btn:hover{background:var(--bg-light-slct);}
-.theme-btn > svg{width:42%;}
+.prim-btn{display:flex; width:40px; height:40px; border-radius:6.5px; background:var(--bg-float-canvas);}
+.prim-btn:hover{background:var(--bg-float-canvas-slct);}
+.theme-btn{position:relative;}
+.theme-btn > svg{width:42%; position:relative; z-index:5;}
+.theme-btn > svg .bulb-head{fill:var(--bg-bright-color);}
+[data-theme="dark"] .theme-btn > .bright-effect{background:#fff; width:10px; height:10px; border-radius:5px; box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); margin-top:-4px;}
 
 /* ==================================================
     util bar
 ================================================== */
-.utilbar{width:185px; height:50px; border-radius:6.5px; margin-top:-25px; background:#fff; position:fixed; top:50%; left:0; z-index:10; transform:rotateZ(45deg);}
+.utilbar{height:185px; width:50px; border-radius:6.5px; margin-top:-25px; background:var(--bg-float-canvas); position:fixed; top:50%; left:20px; z-index:10;}
 
 /* ==================================================
     Bento box
 ================================================== */
-.bento-box{box-sizing:border-box; border-radius:8.5px; border-left:5px solid #a0b388; background-color:var(--background-color);} 
+.bento-box{box-sizing:border-box; border-radius:8.5px; border-left:5px solid #a0b388; background-color:var(--bg-float-canvas);} 
 .bento-pd{padding:16px 30px;}
 
 /* ==================================================
@@ -44,3 +47,9 @@
     basic post
 ================================================== */
 .bsc-post{padding:20px 0 0;}
+
+/* ==================================================
+    float animation
+================================================== */
+.float-ani{width:200px; height:200px; border:1px solid #222; position:absolute; top:0; right:0;}
+.float-line{width:3px; border-radius:50% 50% 1.5px 1.5px; height:100px; background-color:var(--reverse-color); position:absolute; left:30px; top:0;}
