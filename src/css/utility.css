@@ -3,27 +3,34 @@
 ================================================== */
 :root {
     --background-color:#ffffff;
+    --bg-inside-page: #ececec;
     --bg-float-canvas: #ffffff;
     --bg-float-canvas-slct: #f3f3f3;
     --bg-light: #fafafa;
     --bg-light-slct: #ececec;
     --bg-bright-color: #c7c7c7;
-    --reverse-color:#1a1a1a;
+    --default-color:#ffffff;
+    --reverse-default-color:#1a1a1a;
 }
 [data-theme="dark"]{
 
     --background-color:#1a1a1a;
+    --bg-inside-page: #494949;
     --bg-float-canvas: #3b3b3b;
     --bg-float-canvas-slct: #494949;
     --bg-light: #fafafa;
     --bg-light-slct: #ececec;
     --bg-bright-color: #ffffff;
-    --reverse-color:#ffffff;
+    --default-color:#1a1a1a;
+    --reverse-default-color:#ffffff;
 }
 
 .wrapper{
+    width:100%;
+    overflow:hidden;
+    position:relative;
     background-color:var(--background-color);
-    color:var(--reverse-color);
+    color:var(--reverse-default-color);
 }
 
 header{width:100%; position: absolute; top:70px; left:0; z-index:50;}

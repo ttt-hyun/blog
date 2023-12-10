@@ -27,7 +27,7 @@
 /* ==================================================
     Bento box
 ================================================== */
-.bento-box{box-sizing:border-box; border-radius:8.5px; border-left:5px solid #a0b388; background-color:var(--bg-float-canvas);} 
+.bento-box{box-sizing:border-box; border-radius:8.5px; border-left:5px solid #a0b388; background-color:var(--bg-float-canvas); position:relative; z-index:5;} 
 .bento-pd{padding:16px 30px;}
 
 /* ==================================================
@@ -51,5 +51,37 @@
 /* ==================================================
     float animation
 ================================================== */
-.float-ani{width:200px; height:200px; border:1px solid #222; position:absolute; top:0; right:0;}
-.float-line{width:3px; border-radius:50% 50% 1.5px 1.5px; height:100px; background-color:var(--reverse-color); position:absolute; left:30px; top:0;}
+.float-ani{width:200px; height:200px; background-color:var(--reverse-default-color); position:absolute; top:0; right:0; overflow:hidden;}
+.float-ani::before{display:block; content:''; clear:both; width: 0; height: 0; border-bottom: 200px solid var(--background-color); border-top: 200px solid transparent; border-left: 200px solid var(--background-color); border-right: 200px solid transparent; position:absolute; top:0; left:0; box-shadow:rgba(0, 0, 0, 0.06) 0px 1.3px 13px 3.25px; transition: all .3s; transform:scale(1.3) rotateZ(8deg);}
+.float-ani > *{position:absolute;}
+/* .float-ani .drop{position:absolute; top:-100px; background:var(--default-color); width:2px; height:10px; transform-origin:left bottom; animation:dropping 1s linear infinite;} */
+
+.float-ani .drop{font-weight:700; position:absolute; height:20px; line-height:20px; color:var(--default-color); transform-origin:bottom; animation:dropping 2s linear infinite;}
+
+
+@keyframes dropping{
+    0%{transform:translateY(0)}
+    100%{transform:translateY(500px); text-shadow: -50px 0 0 var(--default-color), 50px 0 0 var(--default-color);}
+}
+
+/* @keyframes dropping{
+    0%{transform:translateY(0) scaleY(1);}
+    15%{transform:translateY(100px) scaleY(1);}
+    20%{transform:translateY(100px) scaleY(0.2);}
+    25%{transform:translateY(100px) scaleY(0.2) scaleX(5);transform-origin:left bottom;}
+    40%{transform:translateY(100px) translateX(150px) scaleY(0.2) scaleX(5); transform-origin:right bottom;}
+    45%{transform:translateY(100px) translateX(150px) scaleY(0.2) scaleX(1); transform-origin:right bottom;}
+    50%{transform:translateY(110px) translateX(150px) scaleY(1) scaleX(1); transform-origin:right top;}
+    75%{transform:translateY(200px) translateX(150px) scaleY(1) scaleX(1); transform-origin:left bottom;}
+    80%{transform:translateY(200px) translateX(150px) scaleY(0.2) scaleX(1); transform-origin:left bottom;}
+    85%{transform:translateY(200px) translateX(150px) scaleY(0.2) scaleX(5); transform-origin:left bottom;}
+    100%{transform:translateY(200px) translateX(300px) scaleY(0.2) scaleX(5); transform-origin:left bottom;}
+} */
+
+/* @keyframes dropping{
+    0%{transform:translateY(0) scaleY(1);}
+    35%{transform:translateY(190px) scaleY(1);}
+    40%{transform:translateY(190px) scaleY(0.2);}
+    45%{transform:translateY(190px) scaleY(0.2) scaleX(5);}
+    100%{transform:translateY(190px) translateX(200px) scaleY(0.2) scaleX(5);}
+} */

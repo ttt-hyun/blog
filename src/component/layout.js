@@ -33,5 +33,31 @@ function Floatani(){
         </div>
     )
 }
+function randomText(){
+    const text = ('$()+=></!*&%CRE');
+    var letter = text[Math.floor(Math.random() * text.length)];
+    return letter;
+}
+function rain(){
+    let cloud = document.querySelector('.float-ani');
+    let e = document.createElement('div');
+    let left = Math.floor(Math.random() * 200);
+    let top = Math.floor(Math.random() * 40);
+    let size = ((Math.random() * 12) + 10) * 0.1;
+    e.classList.add('drop');
+    cloud.appendChild(e);
+    e.innerText = randomText();
+    e.style.left = left + 'px';
+    e.style.top = (-200 + top) + 'px';
+    e.style.fontSize = size + 'rem';
+    
+    setTimeout(function(){
+        cloud.removeChild(e)
+    }, 2000)
+}
+setInterval(function(){
+    rain()
+    rain()
+}, 50);
 
 export {Header, Sideleft, Floatani};
