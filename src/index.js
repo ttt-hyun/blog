@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './css/App.css';
-import './css/reset.css';
-import './css/component.css';
-import './css/utility.css';
-import './css/markdown.css';
+import './assets/css/App.css';
+import './assets/css/reset.css';
+import './assets/css/component.css';
+import './assets/css/utility.css';
+import './assets/css/markdown.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

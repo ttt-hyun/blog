@@ -1,6 +1,4 @@
-import {Header, Sideleft, Floatani} from './component/layout';
-import Main from './component/main';
-import useLocalStorage from "use-local-storage";
+import {Header} from './component/layout';
 import { useState } from 'react';
 
 
@@ -12,11 +10,8 @@ function App() {
 
   return (
     <div className="wrapper" data-theme={isDark ? 'dark' : 'light'}>
-      <Floatani />
       <Header isChecked={isDark} handleChange={toggleDarkMode} />
-      <Sideleft />
       <div className="container flex-box flex-column">
-        <Main />
       </div>
     </div>
   );

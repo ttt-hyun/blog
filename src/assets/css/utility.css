@@ -11,6 +11,7 @@
     --bg-bright-color: #c7c7c7;
     --default-color:#ffffff;
     --reverse-default-color:#1a1a1a;
+    --prim-color:#6f55ff;
 }
 [data-theme="dark"]{
 
@@ -23,6 +24,7 @@
     --bg-bright-color: #ffffff;
     --default-color:#1a1a1a;
     --reverse-default-color:#ffffff;
+    --prim-color:#6f55ff;
 }
 
 .wrapper{
@@ -33,7 +35,7 @@
     color:var(--reverse-default-color);
 }
 
-header{width:100%; position: absolute; top:70px; left:0; z-index:50;}
+header{width:100%; position: absolute; top:20px; left:0; z-index:50;}
 /* ==================================================
                        Flex
 ================================================== */
@@ -76,6 +78,7 @@ header{width:100%; position: absolute; top:70px; left:0; z-index:50;}
 .col-12 {flex: 0 0 auto;  width: 100% !important;}
 
 
+.gap-2 { gap: 2px; }
 .gap-3 { gap: 3px; }
 .gap-4 { gap: 4px; }
 .gap-5 { gap: 5px; }
@@ -114,6 +117,18 @@ header{width:100%; position: absolute; top:70px; left:0; z-index:50;}
 .mt-60 { margin-top: 60px !important;}
 .mt-70 { margin-top: 70px !important;}
 .mt-120 { margin-top: 120px !important;}
+
+/* ==================================================
+                      padding
+================================================== */
+
+.pd-5{padding:5px;}
+.pd-10{padding:10px;}
+.pd-20{padding:20px;}
+.pd-30{padding:30px;}
+.pd-40{padding:40px;}
+.pd-50{padding:50px;}
+.pd-60{padding:60px;}
 
 /* ==================================================
                        text
