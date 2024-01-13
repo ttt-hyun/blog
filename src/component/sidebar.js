@@ -1,0 +1,102 @@
+import React from 'react';
+import { Link } from "react-router-dom";
+import Bulbsvg from './bulbsvg';
+function Sidebar({handleChange, isChecked}){
+    return (
+        <div className="cpt-sidebar flex-shrink">
+            <div className="layout-text flex-box align-items-center">
+                <div className="referer-list">
+                    <ul className="flex-box">
+                        <li>
+                            <Link to='/blog' className='fs16 fw800 default-clr'>Blog</Link>
+                        </li>
+                        <li>
+                            <Link to='/blog/post' className='fs16 fw800 default-clr'>Post</Link>
+                        </li>
+                        <li>
+                            <Link to='/blog' className='fs16 fw800 default-clr'>React</Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className='sidebar-menu'>
+                <ul className='flex-box flex-column gap-10'>
+                    <li>
+                        <Link to="/blog/post" className='flex-box align-items-center prim-bg hov rd10'>
+                            <span className='fs16 fw900 default-clr'>Post</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/blog/lab" className='flex-box align-items-center prim-bg hov rd10'>
+                            <span className='fs16 fw900 default-clr'>Play lab</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/blog/post" className='flex-box align-items-center prim-bg hov rd10'>
+                            <span className='fs16 fw900 default-clr'>Component's</span>
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+            <div className='sidebar-util'>
+                <ul className='flex-box gap-10'>
+                    <li>
+                        <button className="theme-btn prim-btn prim-shadow flex-center" onClick={() => handleChange()}>
+                            <div className='bright-effect'></div>
+                            <Bulbsvg />
+                        </button>
+                    </li>
+                    <li>
+                        <button className="prim-btn prim-shadow flex-center">
+                            <img 
+                                src={`${process.env.PUBLIC_URL}/assets/img/ico_share_gry.svg`} 
+                                alt='공유하기'
+                                width='20'
+                            />
+                        </button>
+                    </li>
+                    <li>
+                        <button className="prim-btn prim-shadow flex-center">
+                            <img 
+                                src={`${process.env.PUBLIC_URL}/assets/img/ico_chat_gry.svg`} 
+                                alt='공유하기'
+                                width='20'
+                            />
+                        </button>
+                    </li>
+                    <li>
+                        <button className="prim-btn prim-shadow flex-center">
+                            <img 
+                                src={`${process.env.PUBLIC_URL}/assets/img/ico_like_gry.svg`} 
+                                alt='공유하기'
+                                width='20'
+                            />
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div className='sidebar-articles'>
+                <div className='articles-head'>
+                    <h4 className='fs24 fw900'>Related articles</h4>
+                </div>
+                <div className='articles-list dot-list'>
+                    <ul>
+                        <li>
+                            <Link to='/' className='fs18 fw600'>React를 시작하며</Link>
+                        </li>
+                        <li>
+                            <Link to='/' className='fs18 fw600'>개발을 Node.js로!!</Link>
+                        </li>
+                        <li>
+                            <Link to='/' className='fs18 fw600'>next.js 사용하기</Link>
+                        </li>
+                        <li>
+                            <Link to='/' className='fs18 fw600'>코드이그나이터에 대해</Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    )
+}
+export {Sidebar}
